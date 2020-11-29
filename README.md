@@ -42,7 +42,7 @@ const UserForm = (({userStore}) => (
 )
 ```
 
-As you can see, the component simply refers to the store's properties for getting and setting properties.
+As you can see, the component simply refers to the store's properties for getting and setting properties. The store can be passed inside of the component (local state) or can use a mechanism such as React's Context to allow for global state maintenance.
 
 ## Computeds
 
@@ -134,7 +134,7 @@ There are two methods for returning the "raw" data object from the store:
 
 ```javascript
 store.getJS() // Returns object literal
-store.getJSON((indent: Number)) // Returns JSON with option indent (good for debugging)
+store.getJSON(indent) // Returns JSON with optional indent param (good for debugging)
 ```
 
 ## Development
