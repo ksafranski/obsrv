@@ -1,7 +1,7 @@
 {
   "name": "obsrv",
-  "version": "1.0.0",
-  "main": "dist/obsrv.min.js",
+  "version": "1.0.1",
+  "main": "src/obsrv.js",
   "license": "MIT",
   "description": "Tiny state management library for React",
   "keywords": [
