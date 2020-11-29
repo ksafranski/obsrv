@@ -141,6 +141,7 @@ store.getJSON(indent) // Returns JSON with optional indent param (good for debug
 
 Download the repository and run `yarn` or `npm install` to install all directories, scripts available are:
 
+- `lint`: runs linter with `--fix` flag
 - `test`: run all unit tests
 - `test:watch`: run all unit tests in `watch` mode
 - `example`: run `example` with hot module reload

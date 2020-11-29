@@ -1,21 +1,21 @@
 import obsrv from '../src/obsrv'
 import React from 'react'
-import { shallow } from 'enzyme'
-import { configure } from 'enzyme'
+import { shallow, configure } from 'enzyme'
+
 import Adapter from 'enzyme-adapter-react-16'
 
 configure({ adapter: new Adapter() })
 
 const storeFixture = {
   data: {
-    foo: 'bar',
+    foo: 'bar'
   },
   computeds: {
-    fizz: ({ foo }) => `${foo}-computed`,
+    fizz: ({ foo }) => `${foo}-computed`
   },
   actions: {
-    biz: ({ foo }) => `return ${foo} from action`,
-  },
+    biz: ({ foo }) => `return ${foo} from action`
+  }
 }
 
 describe('obsrv', () => {
@@ -72,7 +72,7 @@ describe('obsrv', () => {
   it('calls an action and sucessfully executes', () => {
     const Test = () => {
       const store = obsrv(storeFixture)
-      let fooActionResponse = store.actions.biz()
+      const fooActionResponse = store.actions.biz()
       return <div>{fooActionResponse}</div>
     }
     expect(

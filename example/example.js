@@ -8,9 +8,9 @@ const App = () => {
       name: 'John',
       email: 'jsmith@email.com',
       address: {
-        street: '123 main',
+        street: '123 main'
       },
-      tags: ['foo', 'bar'],
+      tags: ['foo', 'bar']
     },
     computeds: {
       nameLength: (data) => {
@@ -18,13 +18,13 @@ const App = () => {
       },
       emailLength: ({ email }) => {
         return email.length
-      },
+      }
     },
     actions: {
       save: ({ name, email }) => {
         console.log('action.save', name, email)
-      },
-    },
+      }
+    }
   })
   return (
     <div className='App'>

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/fluidbyte/obsrv#readme",
   "scripts": {
+    "lint": "standard --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "example": "$(npm bin)/parcel serve ./example/index.html --out-dir ./example/dist --port 8000 --hmr-port 8001",
@@ -37,6 +38,14 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "jest": "^26.6.3",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "expect"
+    ]
   }
 }
