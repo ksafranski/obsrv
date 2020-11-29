@@ -1,5 +1,7 @@
 # Obsrv
 
+[![Build Status](https://travis-ci.org/Fluidbyte/obsrv.svg?branch=master)](https://travis-ci.org/Fluidbyte/obsrv)
+
 Micro state management library for React heavily inspired by [MobX](https://mobx.js.org/).
 
 ## Installation
