@@ -1,0 +1,72 @@
+.App {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.App form {
+  width: 300px;
+  font-size: 1em;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+.App form .field {
+  margin: 2em 0;
+}
+
+.App form .field > label {
+  display: block;
+  margin: 0.75em 0.25em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: rgb(170, 170, 170);
+}
+
+.App form .field > input {
+  width: 100%;
+  padding: 0.75em 1.2em;
+  border: 2px solid rgb(236, 236, 236);
+  border-radius: 0.4em;
+  font-size: 0.9em;
+  color: rgb(170, 170, 170);
+  letter-spacing: inherit;
+  transition: 0.2s ease border, 0.2s ease color;
+}
+
+.App form .field > input:hover,
+.App form .field > input:focus {
+  border: 2px solid rgb(203, 213, 229);
+  outline: none;
+  color: #666;
+}
+
+.App form .field .length {
+  color: #ccc;
+  font-size: 0.75em;
+  margin: 0.5em 0.3em;
+}
+
+.App form button {
+  padding: 0.75em 1.5em;
+  border: 2px solid rgb(236, 236, 236);
+  background-color: rgb(245, 245, 245);
+  border-radius: 0.4em;
+  cursor: pointer;
+  color: #666;
+  letter-spacing: inherit;
+  outline: none;
+  transition: 0.2s ease border, 0.2s ease color;
+  font-weight: 400;
+  color: #999;
+}
+
+.App form button:hover,
+.App form button:active {
+  border: 2px solid rgb(163, 183, 214);
+  color: rgb(131, 131, 131);
+  outline: none;
+}

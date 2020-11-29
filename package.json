@@ -1,0 +1,38 @@
+{
+  "name": "obsrv",
+  "version": "1.0.0",
+  "main": "dist/obsrv.min.js",
+  "license": "MIT",
+  "description": "Tiny state management library for React",
+  "keywords": [
+    "obsrv",
+    "react",
+    "state",
+    "management",
+    "mobx",
+    "simple"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fluidbyte/obsrv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fluidbyte/obsrv/issues"
+  },
+  "homepage": "https://github.com/fluidbyte/obsrv#readme",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "example": "$(npm bin)/parcel serve ./example/index.html --out-dir ./example/dist --port 8000 --hmr-port 8001",
+    "build": "NODE_ENV=production $(npm bin)/parcel build ./src/obsrv.js --out-file ./dist/src/obsrv.min.js --experimental-scope-hoisting"
+  },
+  "dependencies": {
+    "react": "17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "jest": "^26.6.3",
+    "parcel-bundler": "^1.12.4"
+  }
+}
