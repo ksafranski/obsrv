@@ -44,7 +44,7 @@ const UserForm = (({userStore}) => (
 )
 ```
 
-As you can see, the component simply refers to the store's properties for getting and setting properties. The store can be passed inside of the component (local state) or can use a mechanism such as React's Context to allow for global state maintenance.
+The component simply refers to the store's properties for getting and setting properties. The store can be passed inside of the component (local state) or can use a mechanism such as React's Context to allow for global state maintenance.
 
 ## Computeds
 
@@ -65,7 +65,7 @@ const userStore = obsrv({
 });
 ```
 
-The computed can then be used by referencing it in the `computeds` object of the store:
+The computed can then be used by referencing it from the `computeds` object of the store:
 
 ```diff
 const UserForm = (({userStore}) => (
@@ -101,7 +101,7 @@ const userStore = obsrv({
     firstNameLength: ({ firstName }) => firstName.length
   },
 +  actions: {
-+    whatIsMyFirstName: ({ firstName }) => alert(firstName)
++    alertFirstName: ({ firstName }) => alert(firstName)
 +  }
 });
 ```
@@ -121,7 +121,7 @@ const UserForm = (({userStore}) => (
     />
     <span>{userStore.computeds.firstNameLength} characters</span>
 +    <button
-+      onClick={() => userStore.actions.whatIsMyFirstName()}
++      onClick={() => userStore.actions.alertFirstName()}
 +    >
 +      Click Me
 +    </button>
@@ -147,4 +147,3 @@ Download the repository and run `yarn` or `npm install` to install all directori
 - `test`: run all unit tests
 - `test:watch`: run all unit tests in `watch` mode
 - `example`: run `example` with hot module reload
-- `build`: build `src/obsrv.js` to `dist/obsrv.min.js`

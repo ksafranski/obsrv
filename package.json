@@ -24,8 +24,7 @@
     "lint": "standard --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "example": "$(npm bin)/parcel serve ./example/index.html --out-dir ./example/dist --port 8000 --hmr-port 8001",
-    "build": "NODE_ENV=production $(npm bin)/parcel build ./src/obsrv.js --out-file ./dist/src/obsrv.min.js --experimental-scope-hoisting"
+    "example": "$(npm bin)/parcel serve ./example/index.html --out-dir ./example/dist --port 8000 --hmr-port 8001"
   },
   "dependencies": {
     "react": "17.0.1",
