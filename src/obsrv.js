@@ -5,7 +5,7 @@ export const reservedProps = [
   'computeds',
   'actions',
   'getJS',
-  'getJSON'
+  'getJSON',
 ]
 
 /**
@@ -46,7 +46,7 @@ export const dataHandler = {
       target._setters[prop](value)
     }
     return true
-  }
+  },
 }
 
 /**
@@ -80,9 +80,11 @@ export const getComputedsProxy = (computeds, dataProxy) => {
   const computedsHandler = {
     get: (target, prop) => {
       return dataProxy && target[prop](dataProxy)
-    }
+    },
   }
-  return new Proxy(computeds, computedsHandler)
+  return Object.keys(computeds).length
+    ? new Proxy(computeds, computedsHandler)
+    : false
 }
 
 /**
@@ -95,9 +97,11 @@ export const getActionsProxy = (actions, dataProxy) => {
   const actionsHandler = {
     get: (target, prop) => {
       return dataProxy && target[prop].bind(null, dataProxy)
-    }
+    },
   }
-  return new Proxy(actions, actionsHandler)
+  return Object.keys(actions).length
+    ? new Proxy(actions, actionsHandler)
+    : false
 }
 
 /**
@@ -137,6 +141,6 @@ export default function (opts) {
     actions: actionsProxy,
     getJS: getRawData.bind(null, dataProxy),
     getJSON: (indent = false) =>
-      JSON.stringify(getRawData(dataProxy), null, indent)
+      JSON.stringify(getRawData(dataProxy), null, indent),
   })
 }
